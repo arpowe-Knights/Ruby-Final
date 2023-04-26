@@ -10,7 +10,7 @@ public class FireZone : MonoBehaviour
     public List<int> burnTickTimers = new List<int>();
 
     private const int DAMAGE_PER_TICK = 1;
-    private const int MAX_BURNS = 3;
+    private const int MAX_BURNS = 2;
     private const int BURN_TIME = 1;
     private int burnsLeft = 0;
     private float cBurnTime = 0;
@@ -26,7 +26,7 @@ public class FireZone : MonoBehaviour
         {
             cBurnTime = 0;
             burnsLeft = 0;
-            
+
             if (ruby != null) ruby.smokeParticles.Stop();
         }
 

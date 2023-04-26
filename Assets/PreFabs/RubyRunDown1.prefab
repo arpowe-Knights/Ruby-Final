@@ -9801,7 +9801,7 @@ MonoBehaviour:
   timeInvincible: 2
   throwSound: {fileID: 8300000, guid: 13fd04e24d3a58f4b8bbd0b5ae7b5855, type: 3}
   hitSound: {fileID: 8300000, guid: ecd3edead166c1345a429478495f0b75, type: 3}
-  jambiVoice: {fileID: 0}
+  jambiVoice: {fileID: 8300000, guid: ffa3329365f9f584ab8187f9160574eb, type: 3}
   damageParticles: {fileID: 1776470795}
   healthParticles: {fileID: 6074336531433224578}
   smokeParticles: {fileID: 1023802923023069891}
