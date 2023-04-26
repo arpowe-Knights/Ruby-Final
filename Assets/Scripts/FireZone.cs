@@ -22,19 +22,21 @@ public class FireZone : MonoBehaviour
 
     private void Update()
     {
-        if (burnsLeft <= 0) return;
-
-        cBurnTime -= Time.deltaTime;
-
-        if (cBurnTime <= 0)
+        if (burnsLeft <= 0)
         {
-            BurnOnce();
+            cBurnTime = 0;
+            burnsLeft = 0;
+            
+            if (ruby != null) ruby.smokeParticles.Stop();
+        }
 
-            if (burnsLeft < 0)
+        else if (burnsLeft > 0)
+        {
+            cBurnTime -= Time.deltaTime;
+
+            if (cBurnTime <= 0)
             {
-                cBurnTime = 0;
-                burnsLeft = 0;
-                ruby.smokeParticles.Stop();
+                BurnOnce();
             }
         }
 

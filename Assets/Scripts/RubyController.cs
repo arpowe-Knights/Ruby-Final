@@ -31,6 +31,8 @@ public class RubyController : MonoBehaviour
 
     public ParticleSystem damageParticles;
     public ParticleSystem healthParticles;
+
+    [HideInInspector]
     public ParticleSystem smokeParticles;
 
     int cogs = 0;
@@ -51,6 +53,10 @@ public class RubyController : MonoBehaviour
 
         cogs = GameObject.FindGameObjectsWithTag("Robot").Count();
         CogCounter.Instance.SetCount(cogs);
+
+        smokeParticles = transform.Find("SmokeEffect").GetComponent<ParticleSystem>();
+
+        smokeParticles.Stop();
 
     }
 
